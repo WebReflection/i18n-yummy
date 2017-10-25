@@ -9,7 +9,7 @@ You can use this module to bring in `i18n` in your project.
 
   * CommonJS version available as `package.json` **main** entry
   * ECMAScript 2015 version available as `package.json` **module** entry
-  * Browser version available as both [index.js](https://unpkg.com/i18n-dummy@latest/index.js) and [min.js](https://unpkg.com/i18n-dummy@latest/min.js)
+  * Browser version available as both [index.js](https://unpkg.com/i18n-yummy@latest/index.js) and [min.js](https://unpkg.com/i18n-yummy@latest/min.js)
 
 ### How to
 You need to specify a default `i18n.locale = 'en'` language and a valid `i18n.db = {...}` database.
