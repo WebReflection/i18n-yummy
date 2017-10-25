@@ -1,0 +1,33 @@
+{
+  "name": "i18n-yummy",
+  "version": "0.0.0",
+  "description": "The i18n tag function",
+  "main": "cjs/main.js",
+  "module": "esm/main.js",
+  "scripts": {
+    "build": "npm run cjs && npm run esm && npm run min && npm test",
+    "cjs": "echo \"module.exports = $(cat index.js);\" > cjs/main.js",
+    "esm": "echo \"export default $(cat index.js);\" > esm/main.js",
+    "min": "uglifyjs index.js --compress --mungle -o min.js",
+    "test": "node -e 'const i18n=require(`./`);i18n.db={1:{1:{t:[1],v:[]}},2:{1:{t:[2],v:[]}}};i18n.locale=1;console.assert(i18n`1`===`1`);i18n.locale=2;console.assert(i18n`1`===`2`);'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/i18n-dummy.git"
+  },
+  "keywords": [
+    "i18n",
+    "tag",
+    "template",
+    "literals"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebReflection/i18n-dummy/issues"
+  },
+  "homepage": "https://github.com/WebReflection/i18n-dummy#readme",
+  "devDependencies": {
+    "uglify-es": "^3.1.5"
+  }
+}
