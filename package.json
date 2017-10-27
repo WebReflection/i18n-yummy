@@ -9,7 +9,7 @@
     "cjs": "echo \"module.exports = $(cat index.js);\" > cjs/main.js",
     "esm": "echo \"export default $(cat index.js);\" > esm/main.js",
     "min": "uglifyjs index.js --compress --mungle -o min.js",
-    "test": "node -e 'const i18n=require(`./`);i18n.db={1:{1:{t:[1],v:[]}},2:{1:{t:[2],v:[]}}};i18n.locale=1;console.assert(i18n`1`===`1`);i18n.locale=2;console.assert(i18n`1`===`2`);'"
+    "test": "node -e 'const i18n=require(`./`);i18n.db={[[`a`,`b`,`c`].join(`\\x01`)]:{it:{t:[`d`,`e`,`f`],v:[1,0]}}};console.assert(i18n`a${0}b${1}c`===`a0b0c`);i18n.locale=`it`;console.assert(i18n`a${0}b${1}c`===`d1e0f`);'"
   },
   "repository": {
     "type": "git",

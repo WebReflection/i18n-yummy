@@ -4,6 +4,7 @@ The i18n tag function
 [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/WebReflection/donate) [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](https://opensource.org/licenses/ISC)
 
 [Related post](https://codeburst.io/easy-i18n-in-10-lines-of-javascript-poc-eb9e5444d71e).
+**Warning** the current function is different from the post one. It's now [fault tolerant and it supports a better database](https://github.com/WebReflection/i18n-utils/issues/1) structure.
 
 You can use this module to bring in `i18n` in your project.
 
@@ -14,4 +15,4 @@ You can use this module to bring in `i18n` in your project.
 ### How to
 You need to specify a default `i18n.locale = 'en'` language and a valid `i18n.db = {...}` database.
 
-You can use [i18n utilities](https://github.com/WebReflection/i18n-utils) to setup a database or to parse your project files.
+You can use [i18n utilities](https://github.com/WebReflection/i18n-utils) to setup a database parsing your projects files.

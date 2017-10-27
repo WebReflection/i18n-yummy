@@ -1,1 +1,1 @@
-function i18n(template){for(var info=i18n.db[i18n.locale][template.join("")],out=[info.t[0]],i=1,length=info.t.length;i<length;i++)out[i]=arguments[1+info.v[i-1]]+info.t[i];return out.join("")}
+function i18n(template){for(var k=template.join(""),info=((i18n.db||{})[k]||{})[i18n.locale]||{v:[]},t=info.t||template,out=[t[0]],i=1,length=t.length;i<length;i++)out[i]=arguments[1+(info.v[i-1]||0)]+t[i];return out.join("")}
