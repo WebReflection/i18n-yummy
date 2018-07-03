@@ -2,6 +2,7 @@
   "name": "i18n-yummy",
   "version": "0.2.0",
   "description": "The i18n tag function",
+  "unpkg": "min.js",
   "main": "cjs/main.js",
   "module": "esm/main.js",
   "scripts": {
